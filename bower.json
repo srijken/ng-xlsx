@@ -1,0 +1,11 @@
+{
+	"name": "angular-xlsx",
+	"version": "0.0.1",
+	"dependencies": {
+    	"js-xlsx": "~0.8.0",
+    	"angular": "~1.3.0"
+	},
+	"devDependencies":{
+		"angular-mocks": "*"
+	}
+}
