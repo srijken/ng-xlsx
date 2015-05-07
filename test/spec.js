@@ -7,7 +7,7 @@ describe("ng-xslx", function(){
 
 	it("single cell creates one sheet", function(){
 		
-		var result = svc.writeXslx([
+		var result = svc.writeXlsx([
 		{
 			sheetName: "testSheet",
 			columnDefs: [
@@ -26,7 +26,7 @@ describe("ng-xslx", function(){
 	});
 
 	it("created sheet contains data", function(){
-		var result = svc.writeXslx([
+		var result = svc.writeXlsx([
 		{
 			sheetName: "testSheet",
 			columnDefs: [
@@ -46,7 +46,7 @@ describe("ng-xslx", function(){
 	});
 
 	it("book with two sheets", function(){
-		var result = svc.writeXslx([
+		var result = svc.writeXlsx([
 		{
 			sheetName: "testSheet",
 			columnDefs: [
@@ -76,7 +76,7 @@ describe("ng-xslx", function(){
 	});
 
 	it("cells are mapped to columns", function(){
-		var result = svc.writeXslx([
+		var result = svc.writeXlsx([
 		{
 			sheetName: "testSheet",
 			columnDefs: [

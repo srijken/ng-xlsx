@@ -1,7 +1,7 @@
 angular.module("ngXlsx", [])
 	.factory("ngXlsx", function(){
 		return {
-			writeXslx: writeXslx
+			writeXlsx: writeXlsx
 		};
 
 		function Workbook() {
@@ -42,7 +42,7 @@ angular.module("ngXlsx", [])
             range.e.r++;
     	}
 
-		function writeXslx(data){
+		function writeXlsx(data){
 			var wopts = {bookType:"xlsx", bookSST:false, type:"binary"};
 			
 			var workbook = new Workbook();

@@ -2,7 +2,7 @@
 
 Usage
 
-    var result = svc.writeXslx([
+    var result = svc.writeXlsx([
 		{
 			sheetName: "testSheet",
 			columnDefs: [
