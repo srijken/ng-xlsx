@@ -11,7 +11,8 @@ module.exports = function(grunt){
 					"angular-xlsx.js"
 				],
 				options:{
-					specs: "test/*.js"
+					specs: "test/*.js",
+					//vendor: ""
 				}
 			}
 		},
