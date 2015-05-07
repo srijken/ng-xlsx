@@ -1,7 +1,8 @@
 angular.module("ngXlsx", [])
 	.factory("ngXlsx", function(){
 		return {
-			writeXlsx: writeXlsx
+			writeXlsx: writeXlsx,
+			getBlob: getBlob
 		};
 
 		function Workbook() {
@@ -84,5 +85,18 @@ angular.module("ngXlsx", [])
 
 
 			return wbout;
+		}
+
+		function s2ab(s) {
+  			var buf = new ArrayBuffer(s.length);
+		  	var view = new Uint8Array(buf);
+			for (var i=0; i!=s.length; ++i) 
+				view[i] = s.charCodeAt(i) & 0xFF;
+			return buf;
+		}
+
+		function getBlob(data){
+			var result = writeXlsx(data);
+			return new Blob([s2ab(result)],{type:"application/octet-stream"});
 		}
 	});
