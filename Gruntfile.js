@@ -1,6 +1,7 @@
 module.exports = function(grunt){
 
 	grunt.initConfig({
+		pkg: grunt.file.readJSON("package.json"),
 		jasmine:{
 			unit:{
 				src: [
@@ -25,19 +26,28 @@ module.exports = function(grunt){
 				tasks: ["jshint", "jasmine"]
 			}
 		},
+		uglify:{
+			options:{
+
+			},
+			dist: {
+				files: {
+					"dist/angular-xlsx.min.js": ["angular-xlsx.js"]
+				}
+			}
+		},
 		bower:{
 			install:{
-
 			}
 		}
 	});
 
-	//grunt.loadNpmTasks("grunt-contrib-uglify");
+	grunt.loadNpmTasks("grunt-contrib-uglify");
 	grunt.loadNpmTasks("grunt-contrib-jasmine");
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks('grunt-bower-task');
 
-	grunt.registerTask("build", ["concat", "uglify"]);
+	grunt.registerTask("default", ["bower:install", /*"concat",*/ "uglify"]);
 	grunt.registerTask("test", ["build", "jasmine"])
 };
