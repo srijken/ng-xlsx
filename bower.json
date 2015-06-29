@@ -1,19 +1,22 @@
 {
-	"name": "angular-xlsx",
-	"version": "0.1.0",
-	"license": "Apache",
-	"main": "dist/angular-xlsx.min.js",
-	"dependencies": {
-    	"js-xlsx": "~0.8.0",
-    	"angular": "~1.3.0",
-    	"file-saver-saveas-js": "~v1.20150304.1"
-	},
-	"ignore": [
-    	"**/.*",
-    	"node_modules",
-    	"bower_components"
-  	],
-	"devDependencies":{
-		"angular-mocks": "*"
-	}
+  "name": "angular-xlsx",
+  "version": "0.1.0",
+  "license": "Apache",
+  "main": "dist/angular-xlsx.min.js",
+  "dependencies": {
+    "js-xlsx": "~0.8.0",
+    "angular": "~1.4.1",
+    "file-saver-saveas-js": "~v1.20150304.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "angular-mocks": "*"
+  },
+  "resolutions": {
+    "angular": "~1.3.11"
+  }
 }
