@@ -30,6 +30,9 @@ angular.module("ngXlsx", [])
 
                 if(typeof cell.v === 'number') cell.t = 'n';
                 else if(typeof cell.v === 'boolean') cell.t = 'b';
+				else if (cell.v instanceof Function) {
+					cell.v(cell,{ datenum: datenum });
+				}
                 else if(cell.v instanceof Date){
                 	cell.t = 'n';
                 	cell.z = XLSX.SSF._table[14];
