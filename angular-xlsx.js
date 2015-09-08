@@ -1,5 +1,5 @@
 angular.module("ngXlsx", [])
-    .factory("ngXlsx", function ($interpolate) {
+    .factory("ngXlsx", ["$interpolate", function ($interpolate) {
         return {
             writeXlsx: writeXlsx,
             getBlob: getBlob
@@ -131,4 +131,4 @@ angular.module("ngXlsx", [])
                 type: "application/octet-stream"
             });
         }
-    });
+    }]);
