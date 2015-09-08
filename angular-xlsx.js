@@ -82,7 +82,12 @@ angular.module("ngXlsx", [])
                 var header = [];
                 columnDefs.forEach(function (columnDef) {
                     header.push(columnDef.displayName);
-                    columnDef.interpolator = $interpolate(startSymbol + columnDef.field + endSymbol);
+
+                    if (columnDef.cellFilter) {
+                        columnDef.interpolator = $interpolate(startSymbol + columnDef.field + "|" + columnDef.cellFilter + endSymbol);
+                    } else {
+                        columnDef.interpolator = $interpolate(startSymbol + columnDef.field + endSymbol);
+                    }
                 });
 
                 addCols(d, header, range);
