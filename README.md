@@ -1,5 +1,9 @@
 # ng-xslx
 
+Installation
+
+    bower install --save angular-xlsx
+
 Usage
 
     var result = svc.writeXlsx([
