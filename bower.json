@@ -1,11 +1,11 @@
 {
   "name": "angular-xlsx",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "license": "Apache",
   "main": "dist/angular-xlsx.min.js",
   "dependencies": {
     "js-xlsx": "~0.8.0",
-    "angular": "~1.4.1",
+    "angular": "~1.5.5",
     "file-saver-saveas-js": "~v1.20150304.1"
   },
   "ignore": [
