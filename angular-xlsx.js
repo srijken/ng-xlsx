@@ -65,7 +65,7 @@ angular.module("ngXlsx", [])
 
             data.forEach(function (sheet) {
 
-                var d = {};
+                var d = { '!cols': []};
                 var columnDefs = sheet.columnDefs;
 
                 var range = {
@@ -90,7 +90,7 @@ angular.module("ngXlsx", [])
                     }
 
                     if(columnDef.width) {
-                        d['!cols'].wpx = columnDef.width;
+                        d['!cols'].push({wpx: columnDef.width});
                     }
                 });
 
