@@ -1,8 +1,8 @@
 {
   "name": "angular-xlsx",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "license": "Apache",
-  "main": "dist/angular-xlsx.min.js",
+  "main": "angular-xlsx.js",
   "dependencies": {
     "js-xlsx": "~0.8.0",
     "angular": "~1.5.5",

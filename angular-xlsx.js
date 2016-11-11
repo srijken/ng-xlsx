@@ -88,6 +88,10 @@ angular.module("ngXlsx", [])
                     } else {
                         columnDef.interpolator = $interpolate(startSymbol + columnDef.field + endSymbol);
                     }
+
+                    if(columnDef.width) {
+                        d['!cols'].wpx = columnDef.width;
+                    }
                 });
 
                 addCols(d, header, range);
