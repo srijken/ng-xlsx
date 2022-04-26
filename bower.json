@@ -6,7 +6,7 @@
   "dependencies": {
     "js-xlsx": "~0.8.0",
     "angular": "~1.5.5",
-    "file-saver-saveas-js": "~v1.20150304.1"
+    "file-saver-saveas-js": "elquimeras/ng-file-saver#^1.1.4"
   },
   "ignore": [
     "**/.*",
